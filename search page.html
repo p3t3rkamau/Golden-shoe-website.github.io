@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background: #232323;
+            overflow: scroll;
+            color: white;
+        }
+        .search-bar input {
+            width: 98%;
+            height: 50px;
+            margin: 40px 0 20px 0;
+            padding-left: 1rem;
+        }
+        input:focus {
+            font-size: 18px ;
+        }
+        .search-bar input ::placeholder:focus{
+            background-color: black;
+            color: white;
+
+        }
+        i,::placeholder {
+            font-size: 20px;
+            color: blue;  
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-box {
+            width: 80px;
+            height: 320px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 47px;
+            width: 23%;
+            max-height: 350px;
+            min-width: 200px;
+            padding: 0 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: capitalize;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            transition: .3s ease-in;
+            text-decoration: none;
+            margin-bottom: 15px;
+            backdrop-filter: blur(15px);
+        }
+        .product-box:hover {
+            box-shadow: 20px 20px 30px rgba(247, 241, 241, 0.2);
+        }
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+        }
+        table tr td {
+           border: none;
+        }
+        table tr td:nth-child(1) {
+            width: 20%;
+            border-collapse: collapse;
+     
+        }
+
+        table tr td h2 {
+            top: -12px;
+            position: relative;
+            text-align: center;
+        }
+        table tr td ul li {
+            top: -150px;
+            list-style: none;
+            font-size: large;
+            font-weight: 500;
+            text-align: center;
+            padding: 50px;
+            text-align: center;
+            margin-right: 30px;
+        }
+                
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right,#47aafa,#ef3b36);
+            clip-path:circle(65% at 100%-20%);
+            z-index: -1;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right,#47aafa,#ef3b36);
+            clip-path:circle(30% at 15% 100%);
+            z-index: -1;
+        }
+        .popular {
+            text-align: center;
+        }
+        .description {
+            text-align: center;
+        }
+        button {
+            width: 80px;
+            height: 20px;
+            background: #47aafa;
+            color: black;
+            outline: none;
+            border: none;
+            transition: .4s;
+        }
+        button:nth-child(even):hover,button:nth-child(odd):hover {
+            background: red;
+            color: white;
+        }
+        #close-window {
+            position: absolute;
+            top: .0rem;
+            right: 0.8rem;
+            background: transparent;
+            color: black;
+            font-size: 2rem;
+            border: none;
+            cursor: pointer;
+        }
+        #fav-icon {
+            position: relative;
+            color: yellow;
+        }
+      
+    </style>
+</head>
+<body>
+    <form class="search-bar">
+        <i class='bx bx-search'></i> 
+        <input type="search" placeholder="Search...">
+        <i class='bx bx-x' id="close-window" onclick="window.location.href='main.html'";></i>
+    </form>
+    <h2 class="popular">Popular</h2>
+    <hr>
+    <table>
+      
+        <tr>
+            <td rowspan="6">
+            
+                <h2>Categories</h2>
+                
+                <ul>
+                    <hr>
+                    <hr>
+                    <li class="jordan">Jordan</li>
+                    <hr>
+                    <li>Nike</li>
+                    <hr>
+                    <li>Adidas</li>
+                    <hr>
+                    <li>Yeezy</li>
+                    <hr>
+                    <li>All brands</li>
+                    <hr>
+                    <li>Women</li>
+                    <hr>
+                    <li>kids</li>
+                    <hr>
+
+                </ul>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'"; >
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span></span>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </td>
+            <td>
+                
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img1">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                                 <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img2">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                                 <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+        
+    </table>
+    <div id="touched-fav-icon">
+        <i class='bx bxs-heart' ></i>
+
+    </div>
+    <script>
+        let untouchedFavIcon = document.getElementById("fav-icon");
+        let touchedFavIcon = document.getElementsByClassName("touched-fav-icon");
+
+        
+        untouchedFavIcon.addEventListener("change", function(){
+            document.getElementsById("change").innerHTML = touchedFavIcon
+            
+        });
+    
+        
+    </script>
+</body>
+</html>

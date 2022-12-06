@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single product page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="shoe website.css" type="text/css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+        .footer {
+            position: fixed;
+        }
+        .navigation-bar {
+            position: relative;
+        }
+        .image-container {
+            margin: 2rem 2rem;
+           
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+          
+        }
+        .big-image {
+            width: 800px;
+            height: 350px;
+        }
+        .small-image {
+            width: 800px;
+            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .shoe-description {
+            position: relative;
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            
+            
+        }
+        .flex {
+            position: relative;
+            float: left;
+            width: 50%;
+        }
+        table {
+            width: 50%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+            margin: 2rem 2rem 0 11rem;
+            border: 1px solid black;
+            text-align: center;
+        }
+        table tr td {
+            width: 100%;
+            padding: 3.6rem;
+        }
+        table tr td select  {
+            background: black;
+        }
+        .shop-contents {
+            margin-top: -12rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,200px));
+            gap: 4.5rem;
+        }
+        .cart-btn button {
+        
+            margin: 4rem;
+            height: auto;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
+            background: #ef3b36;
+            width: 120px;
+            height: 30px;
+            transition: .5s;
+            cursor: pointer;
+            z-index: 100;
+            position: relative;
+        }
+        .cart-btn button:hover {
+            background: red;
+        }
+        .shop-container {
+            margin-bottom: 5rem;
+            margin-left: .6rem;
+        }
+        .header h2 {
+           align-items: center;
+           justify-content: center;
+        }
+        * {
+            scroll-behavior: smooth;
+        }
+        .shop-contents .product-box {
+            width: 80px;
+            height: 320px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 36px;
+            width: 15%%;
+            max-height: 300px;
+            min-width: 180px;
+            padding: 0 4px;
+            border: 1px solid white;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: capitalize;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            transition: .3s ease-in;
+            text-decoration: none;
+            backdrop-filter: blur(15px);
+        }
+       
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navigation-bar">
+                <ul>
+                    
+                    <li onclick="window.location.href='main.html'";><a href="#">Home</a></li>
+                    <li onclick="window.location.href='Blog page.html'";><a href="#">Blog</a></li>
+                    <li onclick="window.location.href='sign in page.html'";><a href="#">Sign in</a></li>
+                    <div class="left-navigation">
+                        <div class="redirect">
+                            <li><i class='bx bx-search' onclick="window.location.href='search page.html'";></i> </li>
+                        </div>
+                        <li><i class='bx bx-heart' onclick="window.location.href='favourites page.html'";></i></li>
+                        <li onclick="window.location.href='cart page.html'";><i class='bx bx-shopping-bag'></i></li>
+                       
+                    </div>
+                   
+                </ul>
+            </div>
+            
+        </nav>
+        <div class="flex">
+            <div class="image-container">
+                <div class="big-image">
+                    <img src="images/New folder/ADIDAS/254741505018_status_2f02272e94dc42568d5f8684d653e3c5.jpg">
+                </div>
+                <div class="small-image">
+                    <div class="first-image">
+                        <img src="images/New folder/ADIDAS/254741505018_status_00d531b8c0e7413c99bcf3633154c388.jpg">
+                    </div>
+                    <div class="second-image">
+                        <img src="images/New folder/ADIDAS/254741505018_status_86a6c7c36f774157ab26492f5b4b6e16.jpg">
+                    </div>
+                    <div class="third-image">
+                        <img src="images/New folder/ADIDAS/254741505018_status_86a6c7c36f774157ab26492f5b4b6e16.jpg">
+                    </div>
+                    <div class="fourth-image">
+                        <img src="images/New folder/ADIDAS/254741505018_status_dea30eef675a44cb979d0e98c2b72141.jpg">
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        <div class="shoe-description">
+            <table>
+                <tr >
+                    <td colspan="2">Price</td>
+                    <td>Ksh 3000</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Shoe Size
+                        <select>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">Color
+                        <select>
+                            <option>Red</option>
+                            <option>White</option>
+                            <option>Black</option>
+                            <option>Blue</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">Jordan
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+         
+        </div>
+    </div>
+   <div class="cart-btn">
+    <button>Proceed to cart</button>
+   </div>
+
+    
+    <div class="shop-container">
+       
+        <div class="shop-contents">
+            
+            <div class="product-box">
+                <div class="gallery_item_1">
+                    <img src="images/7.jpg" class="gallery-img">
+                    <div class="description">
+                        <span>NIKE SHOES</span>
+                        <p>KSH 4000</p>
+                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_2">
+                    <img src="images/6.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_3">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_1">
+                    <img src="images/7.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_2">
+                    <img src="images/6.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_3">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/3.jpg" class="gallery-img">
+                </div>
+                <div class="description">
+                    <span>NIKE SHOES</span>
+                    <p>KSH 4000</p>
+                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer class="product1">
+        <div class="column">
+
+          <h4>CONTACT</h4>
+          <p><strong>Address: </strong>KIAMBU,IKINU</p>
+          <p><strong>Phone: </strong>+254795 820 643, +2547 95 820 643</p>
+          <p><strong>Hours: </strong>8:00 - 18:00, Mon - Sun</p>
+          <div class="follow">
+            <h4>Connect With Us</h4>
+            <div class="icon">
+              <i class='bx bxl-pinterest'></i>
+              <i class='bx bxl-facebook-square'></i>
+              <i class='bx bxl-whatsapp' ></i>
+              <i class='bx bxl-youtube' ></i>
+              <i class='bx bxl-twitter'></i>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>ABOUT US</h4>
+          <a href="#">Location</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms and condition</a>
+          <a href="#">upcoming</a>
+    
+        </div>
+        <div class="col">
+          <h4>MY ACCOUNT</h4>
+          <a href="sign in page.html">Sign in</a>
+          <a href="cart page.html">View cart</a>
+          <a href="favourites page.html">My wishlist</a>
+          <a href="cart page.html">Track my order</a>
+          <a href="#">Help</a>
+        </div>
+        <div class="col">
+            <h4>SUPPORT</h4>
+            <a href="#">Track your order</a>
+            <a href="#">Delivery & Returns</a>
+            <a href="#">FAQ's</a>
+            <a href="#">contact us</a>
+            <a href="#">Help</a>
+          
+        </div>
+    </footer>
+    
+    
+       
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+         @media(max-width:799px) {
+            body::before {
+            content: '';
+            position: relative;
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            }
+            body::after {
+            content: '';
+            position: relative;
+           
+            }
+            .navigation-bar {
+                width: 110%;
+            }
+            ul li {
+                padding: 16px;
+                position: relative;
+            }
+            .header {
+                color: #000000;
+                font-family: Geomanist;
+                font-size: 24px;
+                font-weight: 500;
+                width: 110%;
+                text-align: center;
+            }
+            table {
+              
+                width: auto;
+                height: auto;
+                table-layout: fixed;
+                border-collapse: collapse;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                white-space: wrap;
+                margin-top: 20px;
+            }
+            table tr td:nth-child(4) {
+                display: none;
+            }
+            img {
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: fit-content;
+                padding: 2px;
+            }
+            .media-query {
+                display: block;
+            }
+            .normal-screen-devices {
+                display: none;
+            }
+            .product-box {
+                min-width: 0%;
+                min-height: fit-content;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                
+                padding: 0 2px;
+             
+                border-radius: 10px;
+                cursor: pointer;
+                text-transform: capitalize;
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+                transition: .3s ease-in;
+                text-decoration: none;
+            }
+            .description h2 {
+                font-size: 16px;
+            }
+            button {
+                width: fit-content;
+                height: auto;
+            }
+        }
+           @media(max-width:880px) {
+            table tr td:nth-child(4) {
+                display: block;
+            }
+            .product-box {
+                width: 80px;
+                height: 300px;
+                justify-content: center;
+                align-items: center;
+                margin: 0 20px;
+                gap: 1rem;
+                width: 15%%;
+                max-height: 350px;
+                min-width: 135px;
+                padding: 0 12px;
+                border: 1px solid #cce7d0;
+                border-radius: 25px;
+                cursor: pointer;
+                text-transform: capitalize;
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+                transition: .3s ease-in;
+                text-decoration: none;
+                margin-bottom: 25px;
+                backdrop-filter: blur(15px);
+            }
+            .normal-screen-devices {
+                display: contents;
+            }
+            .navigation-bar {
+                width: 110%;
+            }
+            ul li {
+                padding: 26px;
+                position: relative;
+                font-weight: 600;
+                font-size: 20px;
+                padding-bottom: .3rem;
+            }
+            .header {
+                color: #000000;
+                font-family: Geomanist;
+                font-size: 24px;
+                font-weight: 500;
+                width: 110%;
+                text-align: center;
+            }
+            .media-query {
+                display: none;
+            }
+
+        }
+        @media(max-width:420px) {
+        
+            .navigation-bar {
+                width: 120%;
+            }
+            ul li {
+                padding: 20px;
+                position: relative;
+            }
+            .header {
+                color: #000000;
+                font-family: Geomanist;
+                font-size: 24px;
+                font-weight: 500;
+                width: 120%;
+                text-align: center;
+            }
+        }
+        @media(max-width:670px) {
+            table tr td:nth-child(4) {
+                display: contents;
+            }
+            .navigation-bar {
+                width: 120%;
+            }
+            ul li {
+                padding: 16px;
+                position: relative;
+                font-weight: 600;
+                font-size: 26px;
+                padding-bottom: .3rem;
+            }
+            .header {
+                color: #000000;
+                font-family: Geomanist;
+                font-size: 24px;
+                font-weight: 500;
+                width: 120%;
+                text-align: center;
+            }
+            @media(max-width:580px) {
+                .header {
+                    width: 120%;
+                    text-align: center;
+                }
+                .navigation-bar {
+                    width: 120%;
+                }
+                ul li {
+                    padding: 20px;
+                }
+            }
+            
+
+        }
+       
+        .product-box {
+            width: 80px;
+            height: 280px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 47px;
+            width: 15%%;
+            max-height: 300px;
+            min-width: 180px;
+            padding: 0 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: capitalize;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            transition: .3s ease-in;
+            text-decoration: none;
+            margin-bottom: 15px;
+            backdrop-filter: blur(15px);
+        }
+        .product-box:hover {
+            box-shadow: 20px 20px 30px rgba(247, 241, 241, 0.2);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+            margin-top: 40px;
+            
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+       
+        .description {
+            text-align: center;
+        }
+        button {
+            width: 80px;
+            height: 20px;
+            background: #47aafa;
+            color: black;
+            outline: none;
+            border: none;
+            transition: .4s;
+        }
+        button:nth-child(even):hover,button:nth-child(odd):hover {
+            background: red;
+            color: white;
+        }
+        .header {
+            background-color: wheat;
+            text-align: center;
+            opacity: .8;
+            color: red;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+            padding: 20px;
+            position: relative;   
+        } 
+        .active {
+            border-bottom: 2px solid #e8fdeb;
+        } 
+        #fav-icon {
+            color: yellow;
+        }
+         
+        i {
+            font-size: 20px;
+        }
+        .navigation-bar {
+            
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            z-index: 200;
+            background-image: linear-gradient(to right,blue,red);
+        }
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right,#47aafa,#ef3b36);
+            clip-path:circle(65% at 100%-20%);
+            z-index: -1;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right,#47aafa,#ef3b36);
+            clip-path:circle(30% at 15% 100%);
+            z-index: -1;
+        }
+        body {
+            background: #232323;
+            color: white;
+        }
+        .icon-active {
+            color: yellow;
+        }
+        .media-query {
+            display: none;
+        }
+       
+     
+       
+            
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navigation-bar">
+            <ul>
+                
+                <li onclick="window.location.href='main.html'";><a href="#" ></a >Home</a></li>
+                      <li onclick="window.location.href='Blog page.html'";><a href="#">Blog</a></li>
+                <li onclick="window.location.href='sign in page.html'";><a href="#">Sign in</a></li>
+                <div class="left-navigation">
+                    <div class="redirect">
+                        <li><i class='bx bx-search' onclick="window.location.href='search page.html'";></i> </li>
+                    </div>
+                    <li class="icon-active" id="active"><i class='bx bxs-heart' ></i></i></li>
+                    <li onclick="window.location.href='cart page.html'";><i class='bx bx-shopping-bag'></i></li>
+                  
+                </div>
+               
+            </ul>
+        </div>
+        
+    </nav>
+    <div class="header">
+        <h2>Favourites</h2>
+    </div>
+    <div class="normal-screen-devices">
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="header">
+            <h2>Recommended For You</h2>
+        </div>
+         
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="header">
+            <h2>Featured Products</h2>
+        </div>
+         
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+  
+
+    <div class="media-query">
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="header">
+            <h2>Recommended For You</h2>
+        </div>
+         
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="header">
+            <h2>Featured Products</h2>
+        </div>
+         
+        <table>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                        <div class="gallery_item_1">
+                            <img src="images/7.jpg" class="gallery-img">
+                            <div class="description">
+                                <span>NIKE SHOES</span>
+                                <p>KSH 4000</p>
+                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <button class="add-cart">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    
+</body>
+</html>
