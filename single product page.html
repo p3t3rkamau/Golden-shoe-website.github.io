@@ -33,6 +33,7 @@
         .big-image {
             width: 800px;
             height: 350px;
+            cursor: pointer;
         }
         .small-image {
             width: 800px;
@@ -42,6 +43,7 @@
             align-items: flex-start;
             flex-direction: row;
             gap: 10px;
+            cursor: pointer;
             margin-top: 5px;
         }
         .shoe-description {
@@ -112,16 +114,13 @@
            align-items: center;
            justify-content: center;
         }
-        * {
-            scroll-behavior: smooth;
-        }
         .shop-contents .product-box {
             width: 80px;
             height: 320px;
             justify-content: center;
             align-items: center;
             margin-left: 36px;
-            width: 15%%;
+            width: 15%;
             max-height: 300px;
             min-width: 180px;
             padding: 0 4px;
@@ -134,7 +133,11 @@
             text-decoration: none;
             backdrop-filter: blur(15px);
         }
+        * {
+            scroll-behavior: smooth;
+        }
        
+    
      
     </style>
 </head>
@@ -162,25 +165,26 @@
         </nav>
         <div class="flex">
             <div class="image-container">
-                <div class="big-image">
-                    <img src="images/New folder/ADIDAS/254741505018_status_2f02272e94dc42568d5f8684d653e3c5.jpg">
-                </div>
-                <div class="small-image">
-                    <div class="first-image">
-                        <img src="images/New folder/ADIDAS/254741505018_status_00d531b8c0e7413c99bcf3633154c388.jpg">
-                    </div>
-                    <div class="second-image">
-                        <img src="images/New folder/ADIDAS/254741505018_status_86a6c7c36f774157ab26492f5b4b6e16.jpg">
-                    </div>
-                    <div class="third-image">
-                        <img src="images/New folder/ADIDAS/254741505018_status_86a6c7c36f774157ab26492f5b4b6e16.jpg">
-                    </div>
-                    <div class="fourth-image">
-                        <img src="images/New folder/ADIDAS/254741505018_status_dea30eef675a44cb979d0e98c2b72141.jpg">
+                <div class="image container">
+                   <div class="big-image">
+                    <img src="images/New folder/ADIDAS/254741505018_status_2f02272e94dc42568d5f8684d653e3c5.jpg" width="100%" id="main-image">
+                     </div>
+                    <div class="small-image">
+                        <div class="small-im-col">
+                            <img  class="small" src="images/New folder/ADIDAS/254741505018_status_dea30eef675a44cb979d0e98c2b72141.jpg" width="100%">
+                        </div>
+                        <div class="small-im-col">
+                            <img  class="small"src="images/New folder/ADIDAS/254741505018_status_dea30eef675a44cb979d0e98c2b72141.jpg" width="100%">
+                        </div>
+                        <div class="small-im-col">
+                            <img  class="small"src="images/New folder/ADIDAS/254741505018_status_86a6c7c36f774157ab26492f5b4b6e16.jpg" width="100%">
+                        </div>
+                        <div class="small-im-col">
+                            <img  class="small"src="images/New folder/ADIDAS/254741505018_status_dea30eef675a44cb979d0e98c2b72141.jpg" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>
-          
         </div>
         <div class="shoe-description">
             <table>
@@ -227,7 +231,7 @@
         </div>
     </div>
    <div class="cart-btn">
-    <button>Proceed to cart</button>
+    <button  onclick="window.location.href='cart page.html'";>Proceed to cart</button>
    </div>
 
     
@@ -394,6 +398,29 @@
           
         </div>
     </footer>
+    <script>
+        
+
+        var mainimage = document.getElementById("main-image");
+        var smallimage = document.getElementsByClassName("small");
+
+        smallimage[0].onclick = function() {
+
+        mainimage.src = smallimage[0].src;
+        }
+        
+        smallimage[1].onclick = function() {
+        mainimage.src = smallimage[1].src;
+        }
+        
+        smallimage[2].onclick = function() {
+        mainimage.src = smallimage[2].src;
+        }
+        
+        smallimage[3].onclick = function() {
+        mainimage.src = smallimage[3].src;
+        }
+    </script>
     
     
        
