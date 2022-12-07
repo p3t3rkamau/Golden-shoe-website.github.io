@@ -228,6 +228,13 @@
         footer h4 {
             color: white;
         }
+        .create-account {
+            display: none;
+        }
+        #account-click:hover {
+            color: red;
+
+        }
        
 
        
@@ -268,13 +275,14 @@
         </div>
         <div class="pass">
             <p id="line-between">Forgot password</p>
-            <p id="account-icon" >Create an account</p>
+            <p id="account-icon" onclick="hide()" itemid="account-click">Create an account</p>
         </div>
     </div>
     <div class="create-account">
         <div class="header">
             <h2>Welcome to Golden world shoes</h2>
             <h3>CREATE ACCOUNT</h3>
+           
         </div>
         <form action="">
             <input type="text" placeholder="First Name" required>
@@ -342,27 +350,22 @@
 
 
 <script>
-    // function hide() {
-    //     var custDiv = document.getElementsByClassName("create-account");
-    //     if (custDiv.style.display === "none") {
-    //         custDiv.style.display = "block";
-    //     } 
-    //     else{
-    //         custDiv.style.display = "none";
-    //     }
-    // }
+    function hide() {
+        var custDiv = document.getElementsByClassName("create-account");
 
-    var a;
-    function hide(){
-        if(a==1){
-            document.getElementsByClassName("create-account").style.display="inline";
-            return a=0;
+        for(i=0; i < custDiv.length; i++){
+            if (custDiv[i].style.display === "none") {
+            custDiv[i].style.display = "block";
+            } 
+            else{
+                custDiv[i].style.display = "none";
+            }
+
         }
-        else {
-            document.getElementsByClassName("create-account").style.color="red";
-            return a=1;
-        }
+        
     }
+
+
 
 </script>
 </html>

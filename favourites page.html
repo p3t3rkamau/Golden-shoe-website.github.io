@@ -7,193 +7,6 @@
     <title>Favourites</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-         @media(max-width:799px) {
-            body::before {
-            content: '';
-            position: relative;
-          
-            }
-            *{
-                padding: 0;
-                margin: 0;
-            }
-            body::after {
-            content: '';
-            position: relative;
-           
-            }
-            .navigation-bar {
-                width: 110%;
-            }
-            ul li {
-                padding: 16px;
-                position: relative;
-            }
-            .header {
-                color: #000000;
-                font-family: Geomanist;
-                font-size: 24px;
-                font-weight: 500;
-                width: 110%;
-                text-align: center;
-            }
-            table {
-              
-                width: auto;
-                height: auto;
-                table-layout: fixed;
-                border-collapse: collapse;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                white-space: wrap;
-                margin-top: 20px;
-            }
-            table tr td:nth-child(4) {
-                display: none;
-            }
-            img {
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: fit-content;
-                padding: 2px;
-            }
-            .media-query {
-                display: block;
-            }
-            .normal-screen-devices {
-                display: none;
-            }
-            .product-box {
-                min-width: 0%;
-                min-height: fit-content;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                
-                padding: 0 2px;
-             
-                border-radius: 10px;
-                cursor: pointer;
-                text-transform: capitalize;
-                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-                transition: .3s ease-in;
-                text-decoration: none;
-            }
-            .description h2 {
-                font-size: 16px;
-            }
-            button {
-                width: fit-content;
-                height: auto;
-            }
-        }
-           @media(max-width:880px) {
-            table tr td:nth-child(4) {
-                display: block;
-            }
-            .product-box {
-                width: 80px;
-                height: 300px;
-                justify-content: center;
-                align-items: center;
-                margin: 0 20px;
-                gap: 1rem;
-                width: 15%;
-                max-height: 350px;
-                min-width: 135px;
-                padding: 0 12px;
-                border: 1px solid #cce7d0;
-                border-radius: 25px;
-                cursor: pointer;
-                text-transform: capitalize;
-                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-                transition: .3s ease-in;
-                text-decoration: none;
-                margin-bottom: 25px;
-                backdrop-filter: blur(15px);
-            }
-            .normal-screen-devices {
-                display: contents;
-            }
-            .navigation-bar {
-                width: 110%;
-            }
-            ul li {
-                padding: 26px;
-                position: relative;
-                font-weight: 600;
-                font-size: 20px;
-                padding-bottom: .3rem;
-            }
-            .header {
-                color: #000000;
-                font-family: Geomanist;
-                font-size: 24px;
-                font-weight: 500;
-                width: 110%;
-                text-align: center;
-            }
-            .media-query {
-                display: none;
-            }
-
-        }
-        @media(max-width:420px) {
-        
-            .navigation-bar {
-                width: 120%;
-            }
-            ul li {
-                padding: 20px;
-                position: relative;
-            }
-            .header {
-                color: #000000;
-                font-family: Geomanist;
-                font-size: 24px;
-                font-weight: 500;
-                width: 120%;
-                text-align: center;
-            }
-        }
-        @media(max-width:670px) {
-            table tr td:nth-child(4) {
-                display: contents;
-            }
-            .navigation-bar {
-                width: 120%;
-            }
-            ul li {
-                padding: 16px;
-                position: relative;
-                font-weight: 600;
-                font-size: 26px;
-                padding-bottom: .3rem;
-            }
-            .header {
-                color: #000000;
-                font-family: Geomanist;
-                font-size: 24px;
-                font-weight: 500;
-                width: 120%;
-                text-align: center;
-            }
-            @media(max-width:580px) {
-                .header {
-                    width: 120%;
-                    text-align: center;
-                }
-                .navigation-bar {
-                    width: 120%;
-                }
-                ul li {
-                    padding: 20px;
-                }
-            }
-            
-
-        }
-       
         .product-box {
             width: 80px;
             height: 280px;
@@ -355,9 +168,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -367,9 +180,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -379,9 +192,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -391,9 +204,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -411,9 +224,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -425,9 +238,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -438,9 +251,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -451,9 +264,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -472,9 +285,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -485,9 +298,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -498,9 +311,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -511,9 +324,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -533,9 +346,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -545,9 +358,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -559,9 +372,9 @@
             </tr>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -571,9 +384,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -591,9 +404,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -605,9 +418,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -620,9 +433,9 @@
             </tr>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -633,9 +446,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -654,9 +467,9 @@
         <table>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -667,9 +480,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -682,9 +495,9 @@
             </tr>
             <tr>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
@@ -695,9 +508,9 @@
                     </div>
                 </td>
                 <td>
-                    <div class="product-box"  onclick="window.location.href='single product page.html'";>
+                    <div class="product-box">
                         <div class="gallery_item_1">
-                            <img src="images/7.jpg" class="gallery-img">
+                            <img src="images/7.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
