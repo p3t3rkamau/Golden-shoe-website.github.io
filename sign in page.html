@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="sign in responsive.css">
     <style>
         * {
             transition: .4s;
             transition-delay: .1s;
+            box-sizing: border-box;
            
            
         }
@@ -66,6 +68,7 @@
             list-style: none;
             float: left;
             padding: 20px;
+            top: -1rem;
             position: relative;   
         }  
          
@@ -73,14 +76,14 @@
             font-size: 20px;
         }
         .navigation-bar {
-           
-    
+
+            top: 0;
             width: 100%;
             height: 50px;
             cursor: pointer;
             margin: 0;
             padding: 0;
-           
+            position: fixed;
             z-index: 200;
             background-image: linear-gradient(to right,blue,red);
         
@@ -149,6 +152,10 @@
         }
         .coupon form input{
             width: 40%;
+        }
+        .coupon form input::placeholder:hover {
+            width: 40%;
+            padding: 0;
         }
         table {
             width: 100%;
@@ -233,11 +240,7 @@
         }
         #account-click:hover {
             color: red;
-
         }
-       
-
-       
     </style>
 </head>
 <body>
@@ -296,7 +299,7 @@
     <div class="coupon">
         <p>Be the first to hear about new releases special offers and more</p>
         <form action="" class="coupon-email">
-            <td><input type="email" placeholder="Email"></td>
+            <td><input type="email" placeholder="Email" required></td>
             <td><button type="submit">Sign up</button></td>
         </form>
     </div>
@@ -352,16 +355,28 @@
 <script>
     function hide() {
         var custDiv = document.getElementsByClassName("create-account");
-
-        for(i=0; i < custDiv.length; i++){
-            if (custDiv[i].style.display === "none") {
-            custDiv[i].style.display = "block";
-            } 
-            else{
-                custDiv[i].style.display = "none";
+        var login = document.getElementsByClassName("login");
+        var centerPass = document.getElementsByClassName("pass");
+        
+        for(i=0; i < centerPass.length; i++){
+            for(i=0; i < login.length; i++){
+            for(i=0; i < custDiv.length; i++){
+                if (custDiv[i].style.display === "none") {
+                    custDiv[i].style.display = "block";
+                    login[i].style.display = "none";
+                    centerPass[i].style.display = "none";
+                }
+                else{
+                    custDiv[i].style.display = "none";
+                    login[i].style.display = "block";
+                    centerPass.style[i].display = "flex"
+                }
             }
+            
 
         }
+        }
+        
         
     }
 
