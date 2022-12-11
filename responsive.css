@@ -342,6 +342,14 @@
         overflow-x: hidden;
         
     }
+    .container .shop-contents .product-box {
+      
+        border: 1px solid #cce7d0;
+        border-radius: 8px;
+       
+       
+       
+    }
     body::before {
         
         background-image: none;
