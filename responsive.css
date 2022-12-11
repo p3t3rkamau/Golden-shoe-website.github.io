@@ -340,29 +340,25 @@
 @media(max-width:580px) {
     * {
         overflow-x: hidden;
-        
     }
     .container .shop-contents .product-box {
       
         border: 1px solid #cce7d0;
         border-radius: 8px;
-       
-       
-       
     }
     body::before {
-        
         background-image: none;
-       
     }
     body::after {
-        
         background-image: none;
-       
     }
-   
     .container .shop-contents .product-box {
-        /* border-right: none;
+        /* 
+    ________________________________________________________________________
+        to remove the borders
+        *uncomment*
+    ________________________________________________________________________
+        border-right: none;
         border-left: none;
         border-radius: 2px; */
         cursor: none;

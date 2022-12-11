@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search page</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-
+    <link rel="stylesheet" href="css/search page responsiveness.css">
     <style>
         body {
             background: #232323;
             overflow: scroll;
             color: white;
+            margin-left: 3.2rem;
         }
+        
         .search-bar input {
             width: 98%;
             height: 50px;
             margin: 40px 0 20px 0;
             padding-left: 1rem;
+            outline: none;
         }
         input:focus {
             font-size: 18px ;
@@ -26,7 +28,6 @@
         .search-bar input ::placeholder:focus{
             background-color: black;
             color: white;
-
         }
         i,::placeholder {
             font-size: 20px;
@@ -44,8 +45,8 @@
             justify-content: center;
             align-items: center;
             margin-left: 47px;
-            width: 23%;
-            max-height: 350px;
+            width: 15%;
+            max-height: 250px;
             min-width: 200px;
             padding: 0 12px;
             border: 1px solid #cce7d0;
@@ -148,8 +149,8 @@
             position: relative;
             color: yellow;
         }
-      
     </style>
+    <link rel="stylesheet" href="css/search page responsiveness.css">
 </head>
 <body>
     <form class="search-bar">
@@ -158,7 +159,7 @@
         <i class='bx bx-x' id="close-window" onclick="window.location.href='index.html'";></i>
     </form>
     <h2 class="popular">Popular</h2>
-    <hr>
+   
     <table>
       
         <tr>
@@ -194,7 +195,7 @@
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
                             <span></span>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                               
                             <button class="add-cart">Add to cart</button>
                            
                         </div>
@@ -208,7 +209,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                               
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -221,7 +222,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                               
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -234,61 +235,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -303,7 +250,61 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                           
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                           
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                           
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                           
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -318,7 +319,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -332,7 +333,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                                 <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -345,7 +346,7 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                                 <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                
                             <button class="add-cart">Add to cart</button>
                         </div>
                     </div>
@@ -359,6 +360,7 @@
         <i class='bx bxs-heart' ></i>
 
     </div>
+    <link rel="stylesheet" href="css/search page responsiveness.css">
     <script>
         let untouchedFavIcon = document.getElementById("fav-icon");
         let touchedFavIcon = document.getElementsByClassName("touched-fav-icon");
