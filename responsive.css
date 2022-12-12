@@ -217,6 +217,16 @@
     .media-query {
         display: none;
     }
+    .shop-contents {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px,140px));
+        position: relative;
+        right: 6KWrem;
+      
+        gap: 3rem;
+        margin-bottom: 2rem;
+        width: 120%;
+    } 
 }
 @media(max-width:760px) {
     .shop-contents {
