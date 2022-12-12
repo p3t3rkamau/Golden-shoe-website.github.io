@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cate page responsive.css">
     <style>
         .header {
+            position: relative;
             text-align: center;
-            padding-bottom: 3rem;
+            color: white;
+            margin-top: 5rem !important;
+            margin-bottom: 2rem !important;
         }
         .product-box {
             width: 80px;
@@ -20,7 +24,7 @@
             gap: 1rem;
             width: 15%;
             max-height: 350px;
-            min-width: 180px;
+            min-width: 150px;
             padding: 0 12px;
             border: 1px solid #cce7d0;
             border-radius: 25px;
@@ -63,18 +67,17 @@
 
         .flex {
             display: flex;
+            max-width: 100px;
         }
         .flex:nth-child(1),.flex:nth-child(2),.flex:nth-child(3),.flex:nth-child(4) {
-            width: 50%;
+            width: 100%;
         }
         .flex .checkout-container{
             width: 60%;
             padding: 40px;
         }
         table {
-       
             width: 100%;
-         
             border-collapse: collapse;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             white-space: nowrap;
@@ -139,7 +142,8 @@
             list-style: none;
             float: left;
             padding: 20px;
-            position: relative;   
+            position: relative; 
+            top: -15px;  
         } 
         .active {
             border-bottom: 2px solid #e8fdeb;
@@ -152,6 +156,11 @@
             height: 50px;
             cursor: pointer;
             z-index: 200;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 2rem !important;
             background-image: linear-gradient(to right,blue,red);
         }
         .container {
@@ -180,14 +189,20 @@
         .container {
             overflow: hidden;
         }
-        .usuggested-products .shopping-contents .product-box {
+        .suggested-products .shopping-contents .product-box {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             float: left;
+            
+        }
+        .suggested-products .shopping-contents {
+            margin-left: 10rem !important;
         }
         footer {
             position: relative;
+            left: 0;
+            right: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -199,6 +214,7 @@
             align-items: flex-start;
             margin-bottom: 20px;
             flex-wrap: wrap;
+            
             justify-content: space-between;
         }
         footer .logo {
@@ -260,7 +276,9 @@
             color: yellow;
         }
     </style>
+    <link rel="stylesheet" href="css/cate page responsive.css">
 </head>
+<link rel="stylesheet" href="css/cate page responsive.css">
 <body>
     <div class="container">
         <nav>
@@ -273,7 +291,7 @@
                         <div class="redirect">
                             <li><i class='bx bx-search' onclick="window.location.href='search page.html'";></i> </li>
                         </div>
-                        <li class="icon-active" id="active" onclick="window.location.href='favourites page.html'";><i class='bx bx-heart' id="fav-icon"></i></li>
+                        <li onclick="window.location.href='favourites page.html'";><i class='bx bx-heart' ></i></li>
                         <li><i class='bx bxs-shopping-bag' id="active-icon"></i></i></li>
                     </div> 
                 </ul>
@@ -378,7 +396,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
 
                             
@@ -391,7 +408,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -403,7 +419,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -415,7 +430,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -427,7 +441,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -439,7 +452,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -451,7 +463,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -463,7 +474,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -475,7 +485,6 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -487,7 +496,28 @@
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                            <button class="add-cart">Add to cart</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box" ">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <button class="add-cart">Add to cart</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                 <div class="product-box" ">
+                    <div class="gallery_item_1">
+                        <img src="images/7.jpg" class="gallery-img">
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
                             <button class="add-cart">Add to cart</button>
                             
                         </div>
@@ -545,5 +575,7 @@
           
         </div>
     </footer>
+    <link rel="stylesheet" href="css/cate page responsive.css">
 </body>
+<link rel="stylesheet" href="css/cate page responsive.css">
 </html>

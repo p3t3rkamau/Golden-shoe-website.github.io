@@ -1,188 +1,131 @@
-@media(max-width:799px) {
-    body::before {
-    content: '';
-    position: relative;
-    }
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    body::after {
-    content: '';
-    position: relative;
-   
-    }
-    .navigation-bar {
-        width: 110%;
+@media(max-width:800px){
+    .product-box {
+        position: relative;
+        width: 80px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2.5rem !important;
+        width: 15%;
+        max-height: 200px;
+        min-width: 100px;
+        padding: 0 0px;
+        border: 1px solid #cce7d0;
+        border-radius: 10px; 
     }
     ul li {
-        padding: 16px;
-        position: relative;
+        display: none;
     }
+    .navigation-bar {
+        width: 100%;
+        top: 0;
+        position: fixed !important;
+        left: 0;
+        right: 0;
+    }
+}
+@media(max-width:700px){
+    .product-box {
+        position: relative;
+        width: 80px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem !important;
+        width: 15%;
+        max-height: 200px;
+        min-width: 100px;
+        padding: 0 0px;
+        border: 1px solid #cce7d0;
+        border-radius: 10px; 
+    }
+    ul li {
+        display: none;
+    }
+    .navigation-bar {
+        width: 100%;
+        top: 0;
+        position: fixed !important;
+        left: 0;
+        right: 0;
+    }
+}
+@media(max-width:420px){
     .header {
-        color: #000000;
-        font-family: Geomanist;
-        font-size: 24px;
-        font-weight: 500;
-        width: 110%;
+        width: 100%;
         text-align: center;
+    }
+    .navigation-bar {
+        width: 100%;
+        top: 0;
+        position: fixed !important;
+        left: 0;
+        right: 0;
+    }
+    ul li {
+        display: none;
     }
     table {
-      
-        width: auto;
-        height: auto;
-        table-layout: fixed;
-        border-collapse: collapse;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        white-space: wrap;
-        margin-top: 20px;
-    }
-    table tr td:nth-child(4) {
-        display: none;
-    }
-    img {
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        height: fit-content;
-        padding: 2px;
-    }
-    .media-query {
-        display: block;
-    }
-    .normal-screen-devices {
-        display: none;
-    }
-    .product-box {
-        min-width: 0%;
-        min-height: fit-content;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
         
-        padding: 0 2px;
-     
-        border-radius: 10px;
-        cursor: pointer;
-        text-transform: capitalize;
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-        transition: .3s ease-in;
-        text-decoration: none;
     }
-    .description h2 {
-        font-size: 16px;
-    }
-    button {
-        width: fit-content;
-        height: auto;
-    }
-}
-   @media(max-width:880px) {
-    table tr td:nth-child(4) {
-        display: block;
-    }
-    .product-box {
-        width: 80px;
-        height: 300px;
-        justify-content: center;
-        align-items: center;
-        margin: 0 20px;
-        gap: 1rem;
-        width: 15%;
-        max-height: 350px;
-        min-width: 135px;
-        padding: 0 12px;
-        border: 1px solid #cce7d0;
-        border-radius: 25px;
-        cursor: pointer;
-        text-transform: capitalize;
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-        transition: .3s ease-in;
-        text-decoration: none;
-        margin-bottom: 25px;
-        backdrop-filter: blur(15px);
-    }
-    .normal-screen-devices {
-        display: contents;
-    }
-    .navigation-bar {
-        width: 110%;
-    }
-    ul li {
-        padding: 26px;
-        position: relative;
-        font-weight: 600;
-        font-size: 20px;
-        padding-bottom: .3rem;
-    }
-    .header {
-        color: #000000;
-        font-family: Geomanist;
-        font-size: 24px;
-        font-weight: 500;
-        width: 110%;
-        text-align: center;
-    }
-    .media-query {
+    table tr td:nth-child(4){
         display: none;
     }
-
-}
-
-
-
-@media(max-width:420px) {
-
-    .navigation-bar {
-        width: 120%;
-    }
-    ul li {
-        padding: 20px;
+    .product-box {
         position: relative;
-    }
-    .header {
-        color: #000000;
-        font-family: Geomanist;
-        font-size: 24px;
-        font-weight: 500;
-        width: 120%;
-        text-align: center;
+        width: 80px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem !important;
+        width: 15%;
+        max-height: 200px;
+        min-width: 100px;
+        padding: 0 0px;
+        border: 1px solid #cce7d0;
+        border-radius: 10px; 
     }
 }
-@media(max-width:670px) {
-    table tr td:nth-child(4) {
-        display: contents;
-    }
-    .navigation-bar {
-        width: 120%;
-    }
-    ul li {
-        padding: 16px;
-        position: relative;
-        font-weight: 600;
-        font-size: 26px;
-        padding-bottom: .3rem;
-    }
+@media(max-width:360px){
     .header {
-        color: #000000;
-        font-family: Geomanist;
-        font-size: 24px;
-        font-weight: 500;
-        width: 120%;
+        width: 100%;
         text-align: center;
     }
-    @media(max-width:580px) {
-        .header {
-            width: 120%;
-            text-align: center;
-        }
-        .navigation-bar {
-            width: 120%;
-        }
-        ul li {
-            padding: 20px;
-        }
+    .navigation-bar {
+        width: 100%;
+        top: 0;
+        position: fixed !important;
+
+        left: 0;
+        right: 0;
     }
+    ul li {
+        display: none;
+    }
+    table {
+        width: 100%;
+      
+    }
+    table tr td:nth-child(4){
+        display: none;
+    }
+    .product-box {
+        position: relative;
+        width: 80px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        margin-left: .3rem !important;
+        width: 15%;
+        max-height: 200px;
+        min-width: 100px;
+        padding: 0 0px;
+        border: 1px solid #cce7d0;
+        border-radius: 10px; 
+    }
+}
+
     
 
-}
+

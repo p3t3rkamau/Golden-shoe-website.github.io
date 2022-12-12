@@ -338,6 +338,11 @@
        
     }
 @media(max-width:580px) {
+    .container .shop-contents .product-box {
+     
+        box-shadow: none;
+        
+    }
     * {
         overflow-x: hidden;
     }
@@ -459,7 +464,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50px,140px));
         position: relative;
-        right: 69px;
+        right: 72px;
         gap: 3rem;
         margin-bottom: 2rem;
         width: 130%;

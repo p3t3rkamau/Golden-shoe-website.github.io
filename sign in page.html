@@ -98,7 +98,7 @@
             z-index: 10;
         }
         .active {
-            border-bottom: 2px solid #e8fdeb;
+            color: yellow;
         }
         body::before {
             content: '';
@@ -250,12 +250,12 @@
                 <ul>
                     <li onclick="window.location.href='index.html'";><a href="#">Home</a></li>
                     <li onclick="window.location.href='Blog page.html'";><a href="#">Blog</a></li>
-                    <li onclick="window.location.href='sign in page.html'";><a href="#">Sign in</a></li>
+                    <li onclick="window.location.href='sign in page.html'"; class="active" ><a href="#">Sign in</a></li>
                     <div class="left-navigation">
                         <div class="redirect">
                             <li><i class='bx bx-search' onclick="window.location.href='search page.html'";></i> </li>
                         </div>
-                        <li><i class='bx bx-heart' class="active"  onclick="window.location.href='favourites page.html'";></i></li>
+                        <li><i class='bx bx-heart'  onclick="window.location.href='favourites page.html'";></i></li>
                         <li onclick="window.location.href='cart page.html'";><i class='bx bx-shopping-bag'></i></li>
                       
                     </div>

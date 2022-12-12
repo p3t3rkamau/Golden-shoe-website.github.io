@@ -74,12 +74,15 @@
             text-align: center;
             opacity: .8;
             color: red;
+            position: relative;
+            /* margin-bottom: 2rem; */
         }
         ul li{
             list-style: none;
             float: left;
             padding: 20px;
-            position: relative;   
+            position: relative;  
+            top: -14px; 
         } 
         .active {
             border-bottom: 2px solid #e8fdeb;
@@ -92,12 +95,15 @@
             font-size: 20px;
         }
         .navigation-bar {
-            
-            width: 100%;
-            height: 50px;
-            cursor: pointer;
             z-index: 200;
             background-image: linear-gradient(to right,blue,red);
+            width: 100%;
+            top: 0;
+            position: fixed !important;
+            left: 0;
+            right: 0;
+            height: 50px;
+    
         }
         .container {
             position: relative;
@@ -135,13 +141,8 @@
         .media-query {
             display: none;
         }
-       
-     
-       
-            
-        
-
     </style>
+    <link href='css/favourite.css' rel='stylesheet'>
 </head>
 <body>
     <nav>
@@ -233,7 +234,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 
                                 <button class="add-cart">Add to cart</button>
                             </div>
@@ -247,7 +247,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -260,7 +259,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -273,7 +271,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -294,7 +291,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -307,7 +303,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -320,7 +315,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -333,7 +327,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -413,7 +406,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 
                                 <button class="add-cart">Add to cart</button>
                             </div>
@@ -427,7 +419,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -442,7 +433,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -455,7 +445,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -476,7 +465,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -489,7 +477,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -504,7 +491,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -517,7 +503,6 @@
                             <div class="description">
                                 <span>NIKE SHOES</span>
                                 <p>KSH 4000</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
                                 <button class="add-cart">Add to cart</button>
                             </div>
                         </div>
@@ -527,6 +512,7 @@
         </table>
 
     </div>
-    
+    <link href='css/favourite.css' rel='stylesheet'>
 </body>
+<link href='css/favourite.css' rel='stylesheet'>
 </html>
