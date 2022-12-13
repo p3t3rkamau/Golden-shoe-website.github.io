@@ -348,6 +348,28 @@
        
     }
 @media(max-width:580px) {
+/* _________________mobile hambuger_________________________ */
+
+    .mobile-hambuger{
+        display: flex;
+        text-align: left;
+        position: relative;
+        justify-content: center;
+        align-items: flex-start;
+        top: 15px;
+        right: -30px;
+        
+    }
+    .mobile-hambuger i {
+        font-size: 30px !important;
+        cursor: pointer;
+
+    }
+    .mobile-hambuger ul li {
+       
+    }
+/* _________________mobile hambuger_________________________ */
+
     .container .shop-contents .product-box {
      
         box-shadow: none;

@@ -289,6 +289,9 @@ button.white {
 #sm-banner .banner-box4 {
     background-image:url("images/png/e93beac7f48f23713eb17eb804a4915ae95635c5-3164x4400.webp");
 }
+.mobile-hambuger{
+    display: none;
+}
 
 
 
