@@ -1,0 +1,225 @@
+/* @media(max-width:1000px){
+    * {
+        height: fit-content;
+    }
+} */
+@media(max-width:500px){
+    * {
+        cursor: none;
+    }
+    ul li{
+       display: none;  
+    } 
+    .header {
+        font-size: 2rem;
+        margin-top: 3rem;
+        overflow: hidden;
+    }
+    .header h3{
+        font-size: 10px;
+        font-weight: 300;
+        color: white;
+    }
+    .header h2{
+        font-size: 12px;
+    }
+    input {
+        width: 100%;
+        height: auto;
+        margin: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button {
+        font-size: 10px;
+        width: 70px;
+        height: auto;
+        background: red;
+        color: white;
+        transition: .8s;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    input::placeholder {
+        
+        transition: .5s;
+        padding-left: 5px;
+    }
+   
+    input:focus {
+        font-size: 15px ;
+        padding-left: 0px;
+        width: 100%;
+        height: auto;
+        transition: .0s;
+        position: relative;
+        outline: none;
+    }
+    .navigation-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        z-index: 200;
+        background-image: linear-gradient(to right,blue,red);
+    }
+    form {
+       
+        border: none;
+        outline: none;
+    }
+    .coupon form input{
+        width: 80%;
+        outline: none;
+        transition: .0s;
+    }
+    .coupon form input:hover {
+        outline: none;
+        width: 80%;
+    }
+    .coupon {
+        margin-bottom: 0;
+    }
+    .coupon p {
+        font-size: 12px;
+        height: 100px;
+        padding-bottom: 0;
+        bottom: 0;
+    }
+    .coupon form button {
+        font-size: 10px;
+    }
+    .pass p {
+        font-size: 10px;
+        cursor: none;
+    }
+    footer {
+        margin-bottom: -2rem;
+    }
+    footer .col:nth-child(3),footer .col:nth-child(2),footer .col:nth-child(4){
+        display: none;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+       
+        
+    }
+} 
+/* ******************************************** */
+@media(max-width:600px){
+    body {
+        background: black;
+    }
+    body::after,body::before{
+        background-image: none;
+    }
+    .login,.create-account {
+        background-color: white;
+        padding-top: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+    .login .header h2,.create-account h2 {
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    .login .header h3,.create-account h3 {
+        color: black;
+        font-weight: 800;
+        
+    }
+    form input {
+        outline: none;
+        width: 70%;
+        border: none;
+        border-bottom: .5px solid black;
+      
+    }
+    form input::placeholder{
+        color: rgb(131, 125, 125);
+        font-size: 14px;
+    }
+    form input:focus{
+        width: 80%;
+        transition: .5s;
+    }
+    .sign-in-btn,.register-btn,.newsletter-btn{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 80%;
+        height: 30px;
+        font-size: 12px;
+    }
+    .pass p{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 14px;
+    }
+    .coupon{
+        margin: 0;
+        left: 0;
+        right: 0;
+        border: none;
+        outline: none;
+    } 
+    .coupon p {
+        font-size: 15px;
+    }
+    .coupon form input {
+        margin-top: 0;
+        border-radius: 10px;
+        height: 30px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+       
+        box-shadow: 10px 20px 10px rgba(rgba(63, 61, 61,0.1));
+        background-image: linear-gradient(to right,#47aafa,#37a1f8,#3283c5,#0f74c7);
+    }
+    
+    .coupon form input::placeholder{
+        padding: 8px;
+        color: black;
+    }
+   
+    .coupon form input:focus{
+        background: white;
+        color: black;
+
+    }
+    .product1 .column h4 {
+       padding: 0 6rem 0 8rem;
+    }
+   
+    .product1 .column p{
+        text-align: center;
+    }
+}
+@media(max-width:250px) {
+    .header h3{
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+    }
+    .header h2{
+        font-size: 12px;
+    }
+    footer {
+        display: none;
+    }
+    .coupon p {
+        font-size: 14px;
+    }
+    input {
+        width: 100%;
+        height: auto;
+        margin: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}

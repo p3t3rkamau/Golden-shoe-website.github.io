@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="sign in responsive.css">
+    <link rel="stylesheet" href="css/sign in responsive.css">
     <style>
         * {
             transition: .4s;
@@ -267,13 +267,13 @@
        
         <div class="login">
             <div class="header">
-                <h2>Welcome to Golden world shoes</h2>
+                <h2>Welcome to Golden World Sneakers</h2>
                 <h3>SIGN IN</h3>
             </div>
             <form action="">
                 <input type="email" placeholder="Email Address" required>
                 <input type="password" placeholder="Enter your Password" required>
-                <button type="submit">LOGIN</button>
+                <button class="sign-in-btn" type="submit">LOGIN</button>
             </form>
         </div>
         <div class="pass">
@@ -293,14 +293,16 @@
             <input type="email" placeholder="Email Address">
             <input type="password" placeholder="Enter your Password" required>
             <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">REGISTER</button>
+            <button class="register-btn" type="submit">REGISTER</button>
         </form>
     </div>
     <div class="coupon">
-        <p>Be the first to hear about new releases special offers and more</p>
+        <p>Be the first to hear about new releases special offers and more,
+                       sign up for newsletter
+        </p>
         <form action="" class="coupon-email">
             <td><input type="email" placeholder="Email" required></td>
-            <td><button type="submit">Sign up</button></td>
+            <td><button class="newsletter-btn" type="submit">Sign up</button></td>
         </form>
     </div>
 
@@ -348,39 +350,30 @@
           
         </div>
     </footer>
-</body>
-
-
-
-<script>
-    function hide() {
-        var custDiv = document.getElementsByClassName("create-account");
-        var login = document.getElementsByClassName("login");
-        var centerPass = document.getElementsByClassName("pass");
-        
-        for(i=0; i < centerPass.length; i++){
-            for(i=0; i < login.length; i++){
-            for(i=0; i < custDiv.length; i++){
-                if (custDiv[i].style.display === "none") {
-                    custDiv[i].style.display = "block";
-                    login[i].style.display = "none";
-                    centerPass[i].style.display = "none";
-                }
-                else{
-                    custDiv[i].style.display = "none";
-                    login[i].style.display = "block";
-                    centerPass.style[i].display = "flex"
-                }
-            }
+    <script>
+        function hide() {
+            var custDiv = document.getElementsByClassName("create-account");
+            var login = document.getElementsByClassName("login");
+            var centerPass = document.getElementsByClassName("pass");
             
-
+            for(i=0; i < centerPass.length; i++){
+                for(i=0; i < login.length; i++){
+                    for(i=0; i < custDiv.length; i++){
+                        if (custDiv[i].style.display === "none") {
+                            custDiv[i].style.display = "block";
+                            login[i].style.display = "none";
+                            centerPass[i].style.display = "none";
+                        }
+                        else{
+                            custDiv[i].style.display = "none";
+                            login[i].style.display = "block";
+                            centerPass.style[i].display = "flex"
+                        }
+                    }
+                }
+            }   
         }
-        }
-        
-        
-    }
-
-
-
-</script>
+    </script>
+</body>
+<link rel="stylesheet" href="css/sign in responsive.css">
 </html>

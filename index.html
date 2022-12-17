@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold World Sneakers</title>
+    <!-- ***********************************favicon******************************************** -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/shoe.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+<!-- ################################################################################################# -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="shoe website.css" type="text/css">
-    <link rel="stylesheet" href="responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/Homepage responsiveness.css" type="text/css">
 </head>
 <body>
     <div class="container">
@@ -29,14 +38,7 @@
                    
                 </ul>
                 <div class="mobile-hambuger">
-                    
                     <i class='bx bx-menu'></i> 
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>1</li>
-                        <li>2</li>
-                    </ul>
                 </div>
             </div>
             
@@ -57,6 +59,18 @@
                     <li>Vault</li>
                 </ul>
             </div>
+
+            <!-- mobile responsive sidebar -->
+            <div class="side-bar">
+              <ul class="sidebar-list" >
+                <li>Home</li>
+                <li  onclick="window.location.href='Blog page.html'";>Blog</li>
+                <li  onclick="window.location.href='sign in page.html'";>Sign in</li>
+                <li onclick="window.location.href='search page.html'";>search</li>
+                <li  onclick="window.location.href='favourites page.html'";>favourites</i></li>
+                <li onclick="window.location.href='cart page.html'";>Cart</li>
+              </ul>
+            </div>
           
            
             <div class="advert-banner">
@@ -72,118 +86,203 @@
             </div>
            
         </header>
+        <!-- ######################################single product zoomed effect############################# -->
+        <figure>
+            <div class="full-Img" id="fullImgBox">
+                <img src="images/3.jpg" id="fullImg">
+                <div class="full-image-description">
+                    <span>ADIDAS SHOCK BLADES</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ea.</p>
+                    <p>KSH 3800</p>
+                    <p id="change"><i class='bx bx-heart' id="fav-icon"></i></p>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+                <div class="close-zoomed-icon" onclick="closeFullImg()">X</div>
+
+            </div>
+        </figure>
+        <!-- ########################################################################## -->
         <section>
-            
         <div class="shop-container">
             <div class="shop-contents">
                 <div class="product-box" >
                     <div class="gallery_item_1">
-                        <img src="images/golden shoe back up/ADIDAS/254748772090_status_518b3e86970e4e8e8ff0aea8a0894e3a.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img class="gallery-img"  onclick="openFullImg(this.src)" src="images/golden shoe back up/ADIDAS/254748772090_status_518b3e86970e4e8e8ff0aea8a0894e3a.jpg" >
                         <div class="description">
                             <span>ADIDAS SHOCK BLADES</span>
                             <p>KSH 3800</p>
-                                <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                                <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                                 <button class="add-cart">Add to cart</button>
                         </div>
-                       
+                        
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_2">
-                        <img src="images/golden shoe back up/Air Force/254720418954_status_92f78a1eca6a41ff9aff90c09e453f89.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Air Force/254720418954_status_92f78a1eca6a41ff9aff90c09e453f89.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>AIR FORCE DUKE</span>
                         <p>KSH 3200</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_3">
-                        <img src="images/golden shoe back up/air Max/254720418954_status_ac3904a3f56a4f5e942b6529a413849d.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/air Max/254720418954_status_ac3904a3f56a4f5e942b6529a413849d.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>NIKE AIRMAX</span>
                         <p>KSH 3800</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_4">
-                        <img src="images/golden shoe back up/Air Force/254748772090_status_2246652e61814b348a307d58b2d4808b.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Air Force/254748772090_status_2246652e61814b348a307d58b2d4808b.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>SB DUNK</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="images/golden shoe back up/Desert cuts/254741505018_status_9378cb3a8f8e432b9cc48e6ffd12f0e9.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Desert cuts/254741505018_status_9378cb3a8f8e432b9cc48e6ffd12f0e9.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>DESERT CUT</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_2">
-                        <img src="images/golden shoe back up/Jordan 1 low cut/IMG-20220930-WA0019.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Jordan 1 low cut/IMG-20220930-WA0019.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>JORDAN 1 LOW</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_3">
-                        <img src="images/golden shoe back up/Jordan 1/254748772090_status_876d1abee27d41afa46bc59ed28ce9d4.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Jordan 1/254748772090_status_876d1abee27d41afa46bc59ed28ce9d4.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>AIR FORCE 1 HIGH CUT</span>
                         <p>KSH 3000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_4">
-                        <img src="images/golden shoe back up/Jordan 4/254700235660_status_6273e7ab53cd41878aeb5be66d31c77b.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/Jordan 4/254700235660_status_6273e7ab53cd41878aeb5be66d31c77b.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>JORDAN 4</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_4">
-                        <img src="images/golden shoe back up/KIDS/254748772090_status_027ae094eb0c44a4bda851644a7b6930.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/KIDS/254748772090_status_027ae094eb0c44a4bda851644a7b6930.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>AIR AIRMAX</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-box">
                     <div class="gallery_item_4">
-                        <img src="images/golden shoe back up/ladies/254748772090_status_026669bd42884c0dab364d23eb0aa7fd.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                        <img src="images/golden shoe back up/ladies/254748772090_status_026669bd42884c0dab364d23eb0aa7fd.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     </div>
                     <div class="description">
                         <span>OFFICIAL</span>
                         <p>KSH 3500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                 </div>
@@ -198,11 +297,18 @@
         <div class="shop-contents">
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/lofers/254725373882_status_312e5cfa939b44e58c26efac384c02fb.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/lofers/254725373882_status_312e5cfa939b44e58c26efac384c02fb.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     <div class="description">
                         <span>ROAFERS</span>
                         <p>KSH 2500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                    
@@ -210,106 +316,171 @@
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/puma/254748772090_status_22a70ed7c77b419f86bcba6c2710de73.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/puma/254748772090_status_22a70ed7c77b419f86bcba6c2710de73.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>PUMA</span>
                     <p>KSH 3300</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/ADIDAS/IMG-20220902-WA0018.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/ADIDAS/IMG-20220902-WA0018.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>ADIDAS SHOCK BLADES</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/timber/254741505018_status_1669e2fa7555421092329e5e43ad0457.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/timber/254741505018_status_1669e2fa7555421092329e5e43ad0457.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>TIMBER-LAND</span>
                     <p>KSH 4800</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/vans single sole/Screenshot_20221112-120301_1.png" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/vans single sole/Screenshot_20221112-120301_1.png" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>VANS</span>
                     <p>KSH 1600</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/Jordan 1 low cut/254757128760_status_aa083a61ef13480282ada48a31fd1bb4.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 1 low cut/254757128760_status_aa083a61ef13480282ada48a31fd1bb4.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>JORDAN 1</span>
                     <p>KSH 3200</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/Jordan 4/254720418954_status_ff7820f0927f4f7f85062d3d846ab3bd.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 4/254720418954_status_ff7820f0927f4f7f85062d3d846ab3bd.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>JORDAN 3</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/Jordan 4/254741505018_status_131b944e6a86427a941f6c26c25feee9.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 4/254741505018_status_131b944e6a86427a941f6c26c25feee9.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>JORDAN 4</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/air Max/254741505018_status_d743f84ce84c4a74820215c90e3351fd.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/air Max/254741505018_status_d743f84ce84c4a74820215c90e3351fd.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>AIRMAX</span>
                     <p>KSH 3200</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/Desert cuts/254748772090_status_16689e9fe3d54c7792a027ffb5432034.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Desert cuts/254748772090_status_16689e9fe3d54c7792a027ffb5432034.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>DESERT CUT</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
         </div>
+<!-- **********************************************************FEATURED PRODUCTS************************************************************** -->
+
         <div class="header">
-            <h2>New Arrivals</h2>      
+            <h2>Featured Products</h2>      
         </div>
       
     </header>
@@ -319,11 +490,18 @@
         <div class="shop-contents">
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/Jordan 1 low cut/254741505018_status_10bb396b98b7443a969ec47890db959f.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 1 low cut/254741505018_status_10bb396b98b7443a969ec47890db959f.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     <div class="description">
                         <span>JORDAN 1 LOW</span>
                         <p>KSH 3200</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                    
@@ -331,100 +509,163 @@
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/Jordan 1/254748772090_status_05ec58f6ce3449cb8a77b91570e13eb8.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 1/254748772090_status_f06f66facef74e74883d49bfddcbe16c.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
-                    <span>JORDAN 1 HIGH</span>
+                    <span>JORDAN 1 LOW</span>
                     <p>KSH 3300</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/KIDS/254748772090_status_027ae094eb0c44a4bda851644a7b6930.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/KIDS/254748772090_status_027ae094eb0c44a4bda851644a7b6930.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>AIRMAX</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/KIDS/254748772090_status_093f05e1622749d2a2ea62e2b71fb9a1.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/KIDS/254748772090_status_093f05e1622749d2a2ea62e2b71fb9a1.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>AIRMAX</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/ladies/254748772090_status_17991c6f29e8457ebf41fc399a79f25e.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/ladies/254748772090_status_17991c6f29e8457ebf41fc399a79f25e.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>CONVAS HIGH HEEL</span>
                     <p>KSH 3700</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/lofers/254725373882_status_31a358304b924481a7b369e7992865f2.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/lofers/254725373882_status_31a358304b924481a7b369e7992865f2.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>ROAFERS</span>
                     <p>KSH 2500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/puma/254748772090_status_800b5602ebc94ff29e137dd36de869be.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/puma/254748772090_status_800b5602ebc94ff29e137dd36de869be.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>PUMA</span>
                     <p>KSH 3400</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/slides/254748772090_status_1b084cf7036e48b5adedcc5e4fbfb8b6.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/slides/254748772090_status_1b084cf7036e48b5adedcc5e4fbfb8b6.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>SLIDES</span>
                     <p>KSH 1700</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/timber/254741505018_status_c54d2c7c4a5342d2af15d223f20a127d.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/timber/254741505018_status_c54d2c7c4a5342d2af15d223f20a127d.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>TIMBER-LAND</span>
                     <p>KSH 4800</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/timber/Screenshot_20220919-100937_1.png" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/timber/Screenshot_20220919-100937_1.png" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>WHITE TIMBER-LAND</span>
                     <p>KSH 4800</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
@@ -438,11 +679,18 @@
     <div class="shop-contents">
         <div class="product-box">
             <div class="gallery_item_1">
-                <img src="images/golden shoe back up/ADIDAS/254748772090_status_2c987864cf8448999d3a398bd9e6825f.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/ADIDAS/254748772090_status_2c987864cf8448999d3a398bd9e6825f.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 <div class="description">
                     <span>ADIDAS BLADE</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
                
@@ -450,101 +698,164 @@
         </div>
         <div class="product-box">
             <div class="gallery_item_2">
-                <img src="images/golden shoe back up/Air Force/254748772090_status_48c2647b6f96433f970ffe11e4ae67b8.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/Air Force/254748772090_status_48c2647b6f96433f970ffe11e4ae67b8.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>AIR FORCE 1 PLAIN</span>
                 <p>KSH 2500</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_3">
-                <img src="images/golden shoe back up/air Max/254748772090_status_448f278cf420472b9d2ba01a6ec9a519.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/air Max/254748772090_status_448f278cf420472b9d2ba01a6ec9a519.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>BLADE NIKE SHOCK</span>
                 <p>KSH 3500</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_4">
-                <img src="images/golden shoe back up/Desert cuts/254748772090_status_078a1e6c510144b3862a1cb410d1c92f.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/Desert cuts/254748772090_status_078a1e6c510144b3862a1cb410d1c92f.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>DELTA</span>
                 <p>KSH 3700</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_1">
-                <img src="images/golden shoe back up/Desert cuts/254748772090_status_f9ecabce96684f359ce6f129e2b0839f.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/Desert cuts/254748772090_status_f9ecabce96684f359ce6f129e2b0839f.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>DESERT</span>
                 <p>KSH 3500</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_2">
-                <img src="images/golden shoe back up/Jordan 1/254748772090_status_472de68c823644ff81c4dbedf346d8d2.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/Jordan 1/254748772090_status_472de68c823644ff81c4dbedf346d8d2.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>JORDAN 1</span>
                 <p>KSH 3200</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_3">
-                <img src="images/golden shoe back up/Desert cuts/254748772090_status_bdc8a68c46d5486b9b15096ee9831867.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/Desert cuts/254748772090_status_bdc8a68c46d5486b9b15096ee9831867.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>DESERT CUT</span>
                 <p>KSH 3500</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_4">
-                <img src="images/golden shoe back up/KIDS/254748772090_status_178d035258d249bcbdbc6a060415b168.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/KIDS/254748772090_status_178d035258d249bcbdbc6a060415b168.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>AIR FORCE CUSTOMIZED</span>
                 <p>KSH 3200</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
             
         </div>
         <div class="product-box">
             <div class="gallery_item_4">
-                <img src="images/golden shoe back up/ladies/254748772090_status_25ba4e0452ca43ee932e6727b34a18de.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/ladies/254748772090_status_25ba4e0452ca43ee932e6727b34a18de.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>POCKET BOOTS</span>
                 <p>KSH 4000</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
         <div class="product-box">
             <div class="gallery_item_4">
-                <img src="images/golden shoe back up/lofers/254741505018_status_0276db4e3c174c82af9893ba470b62cf.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <img src="images/golden shoe back up/lofers/254741505018_status_0276db4e3c174c82af9893ba470b62cf.jpg" class="gallery-img" onclick="openFullImg(this.src)">
             </div>
             <div class="description">
                 <span>LOAFERS</span>
                 <p>KSH 3000</p>
-                    <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                   <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                     <button class="add-cart">Add to cart</button>
             </div>
         </div>
@@ -571,6 +882,8 @@
           </div>
         </div>
     </section>
+
+    <!-- ################################################################  NIKE ##################################################################### -->
     <div class="header">
         <h2>Nike</h2>
     </div>
@@ -578,11 +891,18 @@
         <div class="shop-contents">
             <div class="product-box" id="hide">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/puma/254748772090_status_f59f08d16883401c8555acea5966a941.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/puma/254748772090_status_f59f08d16883401c8555acea5966a941.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     <div class="description">
                         <span>SLIDES</span>
                         <p>KSH 1200</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                    
@@ -590,55 +910,109 @@
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/timber/Screenshot_20220919-100910_1.png" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/air Max/IMG-20221108-WA0006.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
-                    <span>LUGS</span>
+                    <span>NIKE AIRMAX</span>
                     <p>KSH 4500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/timber/254748772090_status_6a5eaa7059394c8998bd23c163d7ad44.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/air Max/254748772090_status_1ec3a8f05e6e4d99a072592f7dd5e556.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
-                    <span>TIMBER-LAND</span>
+                    <span>NIKEE</span>
                     <p>KSH 4500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
-                <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/vans/254725373882_status_087c54b68c6e4402955072983f746839.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                <div class="gallery_item_3">
+                    <img src="images/golden shoe back up/air Max/254748772090_status_281b2cf784034798904d85f67d15cce7.jpg" class="gallery-img" onclick="openFullImg(this.src)">
+
                 </div>
                 <div class="description">
-                    <span>VANS CUSTOMIZED</span>
-                    <p>KSH 2000</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                    <span>NIKEE</span>
+                    <p>KSH 4500</p>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/ADIDAS/254748772090_status_3643a49aa09d4fe28f9950efb29038cb.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Air Force/254748772090_status_1caf1c4169844b628e5df3c3ed3fa9b1.jpg" class="gallery-img" onclick="openFullImg(this.src)">
+                </div>
+                <div class="description">
+                    <span>NIKE SNEAKERS</span>
+                    <p>KSH 2000</p>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/golden shoe back up/Air Force/254748772090_status_2246652e61814b348a307d58b2d4808b.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>ADIDAS</span>
                     <p>KSH 3200</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/Air Force/254741505018_status_f01072b44489411ba19187e9ecb2448d.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Air Force/254741505018_status_f01072b44489411ba19187e9ecb2448d.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     <div class="description">
                         <span>AIR FORCE 1 CUSTOMIZED</span>
                         <p>KSH 3000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                    
@@ -648,30 +1022,30 @@
            
         </div>
     </div>
+
+    <!-- ########################################################################################################################################## -->
+<!-- *******************************************************JORDANS**************************************************************************** -->
+
     <div class="header">
         <h2>Jordan</h2>
     </div>
     <div class="shop-container">
         <div class="shop-contents">
-            <div class="product-box" id="hide">
-                <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/timber/FB_IMG_1661440143888_1.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
-                    <div class="description">
-                        <span>TIMBER-LAND</span>
-                        <p>KSH 3000</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
-                            <button class="add-cart">Add to cart</button>
-                    </div>
-                   
-                </div>
-            </div>
+            
             <div class="product-box">
                 <div class="gallery_item_1">
-                    <img src="images/golden shoe back up/timber/Screenshot_20220919-100842_1.png" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 1 low cut/254748772090_status_66ba8cacabeb449287c2630d4e0787a5.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                     <div class="description">
-                        <span>TIMBER-LAND</span>
+                        <span>JORDAN</span>
                         <p>KSH 4500</p>
-                            <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                           <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                             <button class="add-cart">Add to cart</button>
                     </div>
                    
@@ -679,50 +1053,98 @@
             </div>
             <div class="product-box">
                 <div class="gallery_item_2">
-                    <img src="images/golden shoe back up/Jordan 4/254748772090_status_3c82e756e6514b96ad10bd3ff9c71449.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 1/254748772090_status_f06f66facef74e74883d49bfddcbe16c.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>JORDAN 4</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_3">
-                    <img src="images/golden shoe back up/Jordan 4/254741505018_status_76671c1517ce48a487d1ca307b1cac4e.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 4/254741505018_status_76671c1517ce48a487d1ca307b1cac4e.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>JORDAN 4 THUNDER RED</span>
                     <p>KSH 3500</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/officials/status_me_status_IMG-20220825-WA0000.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 4/254748772090_status_0b852103ff244d1a98d61d3f1b2820f5.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
-                    <span>ROAFERS</span>
+                    <span>JORDAN</span>
                     <p>KSH 3000</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
             <div class="product-box">
                 <div class="gallery_item_4">
-                    <img src="images/golden shoe back up/vans/254748772090_status_a7d4d918ee864eec9fb9d73b9d6834f1.jpg" class="gallery-img"  onclick="window.location.href='single product page.html'";>
+                    <img src="images/golden shoe back up/Jordan 4/254748772090_status_16c55a1c9a03451aafac400f69e16c9d.jpg" class="gallery-img" onclick="openFullImg(this.src)">
                 </div>
                 <div class="description">
                     <span>VANS</span>
                     <p>KSH 1600</p>
-                        <span id="change"><i class='bx bx-heart' id="fav-icon"></i></span>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
+                        <button class="add-cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="gallery_item_4">
+                    <img src="images/golden shoe back up/Jordan 4/254748772090_status_00f782d7cb1f4ce08be36c757623828c.jpg" class="gallery-img" onclick="openFullImg(this.src)">
+                </div>
+                <div class="description">
+                    <span>VANS</span>
+                    <p>KSH 1600</p>
+                       <p id="change">
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                    <i class='bx bxs-star' id="fav-icon"></i>
+                                </p>
                         <button class="add-cart">Add to cart</button>
                 </div>
             </div>
            </div>
         </div>
+<!-- ##################################################################END OF JORDANS PART####################################################################### -->
+
     </div>
     <section id="sm-banner">
         <div class="banner-box3">
@@ -730,7 +1152,7 @@
             <div class="banner-background">
                 <h4>Crazy deals</h4>
                 <h2>Buy 1 get 1 free</h2>
-                <p>The best classic bag at Afro beads shop</p>
+                <p>Free delivery</p>
                 <button class="white">Learn more</button>
             </div>
           </div>
@@ -746,6 +1168,7 @@
           </div>
         </div>
     </section>
+    <!-- ****************************************************THE ONLY VISIBLE FOOTER IN MOBILE DEVICES ****************************************************************************** -->
 
     <footer class="product1">
         <div class="column">
@@ -765,6 +1188,7 @@
             </div>
           </div>
         </div>
+        <!-- ################################################################################################################################# -->
         <div class="col">
           <h4>ABOUT US</h4>
           <a href="#">Location</a>
@@ -791,10 +1215,71 @@
           
         </div>
     </footer>
-     
+    <script>
+        const menuIcon = document.querySelector(".mobile-hambuger");
+        const sideBarMenu = document.querySelector(".side-bar");
+        const sideBarList = document.querySelector('.sidebar-list');
+        const list = document.getElementsByTagName('li');
+
+        function revealSideBar(){
+            if(sideBarMenu.classList.contains('side-bar')
+            ){
+                // sideBarMenu.classList.remove('side-bar')
+                sideBarMenu.style.display = 'none'
+               
+                // sideBarList.style.display = 'flex'
+                
+            } else {
+                sideBarMenu.style.display = 'flex'
+            }
+            // for(i=0; i < sideBarMenu.length; i++){
+            //         if (sideBarMenu[i].style.display === "none") {
+            //             sideBarMenu[i].style.display = "block";
+                       
+            //         }
+            //         else{
+            //             sideBarMenu[i].style.display = "none";
+                       
+            //         }
+            //     }
+        }
+        menuIcon.addEventListener('click',revealSideBar)
+
+
+
+        const untouchedFavIcon = document.getElementById('fav-icon');
+
+        untouchedFavIcon.addEventListener('click', function(){
+            this.classList.toggle("bxs-heart")
+        }) 
+
+        const fullImgBox = document.getElementById('fullImgBox');
+        const fullImg = document.getElementById('fullImg');
+        const imageDecription = document.querySelectorAll('.description');
         
+        function openFullImg(pic){
+            fullImgBox.style.display  = 'flex';
+            fullImg.src = pic;
+            
+        }
+
+
+        function closeFullImg(){
+            fullImgBox.style.display = 'none'
+
+        }
         
-    
-    
+
+
+
+
+
+
+
+    </script>
+     <link rel="stylesheet" href="shoe website.css" type="text/css">
+     <link rel="stylesheet" href="css/Homepage responsiveness.css" type="text/css">
 </body>
+<link rel="stylesheet" href="shoe website.css" type="text/css">
+<link rel="stylesheet" href="css/Homepage responsiveness.css" type="text/css">
 </html>
