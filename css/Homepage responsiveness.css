@@ -61,6 +61,57 @@
     }
 } 
 
+@media(max-width:1250px){
+    ul li {
+        padding: 2px;
+        display: none;
+    }
+    .mobile-hambuger{
+        display: flex;
+        text-align: left;
+        position: relative;
+        justify-content: center;
+        align-items: flex-start;
+        top: 15px;
+        right: -8rem;
+        font-size: 30px;
+        
+    }
+    .mobile-hambuger i {
+        font-size: 30px !important;
+        cursor: pointer;
+
+    } 
+/* _________________mobile hambuger_________________________ */
+        /* ___________________________side menu_______________________________________________ */
+    .side-bar{
+        position:fixed;
+        z-index: 200 !important;
+        margin-top: 3.2rem !important;
+        display: flex;
+        left: 1rem !important;
+        background: black;
+        left: 82% !important;
+        top: -.299%;        
+    }
+    nav ul li {
+        display: none;
+    }
+    ul li {
+        display: block;
+    }
+    .side-bar ul li{
+        align-items: flex-start;
+        flex-direction: column;
+        float: none;
+        padding: 30px 70px;
+        border-bottom: 1px solid wheat;
+        /* font-size: 20px !important; */
+    }
+        /* ___________________________________________________________________________________ */
+
+
+}
 @media(max-width:1024px){
     .advert-banner {
         background-image: url("https://source.unsplash.com/WBDK76pCb9E/1600x700");
@@ -151,9 +202,49 @@
 
 }
 @media(max-width:880px) {
-     /* ___________________________side menu_______________________________________________ */
-  
-    /* ___________________________________________________________________________________ */
+    .mobile-hambuger{
+        display: flex;
+        text-align: left;
+        position: relative;
+        justify-content: center;
+        align-items: flex-start;
+        top: 15px;
+        right: -5rem;
+        font-size: 30px;
+        
+    }
+    .mobile-hambuger i {
+        font-size: 30px !important;
+        cursor: pointer;
+
+    } 
+    
+          /* ___________________________side menu_______________________________________________ */
+    .side-bar{
+        position:fixed;
+        z-index: 200 !important;
+        margin-top: 3.2rem !important;
+        display: flex;
+        left: 1rem !important;
+        background: black;
+        left: 52% !important;
+        top: -.299%;        
+    }
+    nav ul li {
+        display: none;
+    }
+    ul li {
+        display: block;
+    }
+    .side-bar ul li{
+        align-items: flex-start;
+        flex-direction: column;
+        float: none;
+        padding: 30px 70px;
+        border-bottom: 1px solid wheat;
+        /* font-size: 20px !important; */
+    }
+/* ___________________________________________________________________________________ */
     * {
         overflow: auto;
     }
@@ -340,11 +431,7 @@
         display: none;
     }
     ul li {
-        padding: 16px;
-        position: relative;
-        font-weight: 600;
-        font-size: 26px;
-        padding-bottom: .3rem;
+       display: none;
     }
     .shop-contents {
         display: grid;
@@ -399,11 +486,7 @@
         font-size: 30px !important;
         cursor: pointer;
 
-    }
-   
-
-   
-    
+    } 
 /* _________________mobile hambuger_________________________ */
 
     .container .shop-contents .product-box {
@@ -413,16 +496,10 @@
     }
     header .small-navigation {
         display: block;
-        
-       
     }
-
-
     * {
         overflow-x: hidden;
     }
-
-
     .container .shop-contents .product-box {
         border: 1px solid #cce7d0;
         border-radius: 8px;
@@ -498,6 +575,75 @@
         width: 55vh;
         margin-left: -3rem;
     }
+
+     /* *******************zooomed effect*************** */
+     figure .full-Img{
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        
+        z-index: 300;
+    }
+    figure .full-Img img {
+        width: 90%;
+        max-width: 350px;
+        margin-top: 3rem;
+        margin-left: 0;
+    }
+    .full-image-description{
+        box-sizing: border-box;
+        position: relative;
+        background-image: linear-gradient(to right,blue,red);
+        color: black !important;
+        padding: 1rem;
+        left: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        top: 0rem;
+        text-align: center;
+        z-index: 400;
+       
+    }
+   
+    .full-image-description button{
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0px 0px;
+        display: none;
+        background-color: red;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+        width: 90%;
+        height: 40px;
+        transition: .8s;
+        position: absolute;
+        transform: translate(-90% -90%);
+        z-index: 500;
+        margin-top: 35%;
+    }
+    .close-zoomed-icon{
+        position: absolute;
+        top: 8%;
+        right: 5%;
+        font-size: 30px;
+        cursor: pointer;
+    
+    }
+    /* *********************************************************************************************************** */
+  
  
 @media(max-width:450px){
      /* ___________________________side menu_______________________________________________ */
@@ -555,10 +701,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50px,140px));
         position: relative;
-        right: 65px;
+        right: 7.6rem;
         gap: 3rem;
         margin-bottom: 2rem;
-        width: 120%;
+        width: 150%;
     }  
      /* ___________________________side menu_______________________________________________ */
      .side-bar{
@@ -709,11 +855,12 @@
         align-items: flex-start;
         flex-direction: column;
         float: none;
-        padding: 10px;
+        padding: 20px 40px;
         border-bottom: 1px solid wheat;
         /* font-size: 20px !important; */
     }
     /* ___________________________________________________________________________________ */
+    
     footer{
         margin-top: 2rem;
         background-image: linear-gradient(to left,#47aafa,#37a1f8,#3283c5,#0f74c7);
@@ -738,9 +885,73 @@
         justify-content: center;
        
     }
-    /* ################################################## mobile hambuger ################################################### */
+    /* *******************zooomed effect*************** */
+    figure .full-Img{
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        
+        z-index: 300;
+    }
+    figure .full-Img img {
+        width: 90%;
+        max-width: 350px;
+        margin-top: 3rem;
+        margin-left: 0;
+    }
+    .full-image-description{
+        box-sizing: border-box;
+        position: relative;
+        background-image: linear-gradient(to right,blue,red);
+        color: black !important;
+        padding: 1rem;
+        left: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        top: 0rem;
+        text-align: center;
+        z-index: 400;
+    }
    
-    /* ############################################################################################################# */
+    .full-image-description button{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0px 0px;
+        display: block;
+        background-color: red;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+        width: 90%;
+        height: 40px;
+        transition: .8s;
+        position: absolute;
+        transform: translate(-90% -90%);
+        z-index: 500;
+        margin-top: 35%;
+    }
+    .close-zoomed-icon{
+        position: absolute;
+        top: 8%;
+        right: 5%;
+        font-size: 30px;
+        cursor: pointer;
+    
+    }
+    /* *********************************************************************************************************** */
+  
+    
            
 }  
 @media(max-width:320px) {
