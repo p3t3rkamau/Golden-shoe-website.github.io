@@ -94,6 +94,10 @@
         left: 82% !important;
         top: -.299%;        
     }
+    .side-bar.active{
+        display: flex;
+
+    }
     nav ul li {
         display: none;
     }
@@ -228,7 +232,12 @@
         left: 1rem !important;
         background: black;
         left: 52% !important;
-        top: -.299%;        
+        top: -.299%;   
+        display: none;     
+    }
+    .side-bar.active{
+        display: flex;
+
     }
     nav ul li {
         display: none;
@@ -717,6 +726,10 @@
         left: 60% !important;
         top: -.299%;   
     }
+    .side-bar.active{
+        display: flex;
+
+    }
     nav ul li {
         display: none;
     }
@@ -748,6 +761,10 @@
         left: 60% !important;
         top: -.299%;
         display: none;
+    }
+    .side-bar.active{
+        display: flex;
+
     }
    
   
@@ -839,11 +856,15 @@
         position:fixed;
         z-index: 200 !important;
         margin-top: 3.2rem !important;
-        display: flex;
         left: 1rem !important;
         background: black;
         left: 60% !important;
-        top: -.299%;        
+        top: -.299%;
+        display: none;        
+    }
+    .side-bar.active{
+        display: flex;
+
     }
     nav ul li {
         display: none;
@@ -950,7 +971,28 @@
     
     }
     /* *********************************************************************************************************** */
-  
+    .small-navigation {
+        position: relative;
+        display: flex;
+    }
+    header .small-navigation ul{
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        float: left;
+        padding: 15px;
+        top: 30px;
+        z-index: -50;
+        position: relative;
+        margin-top: 20px;
+        background-image: linear-gradient(to right,#47aafa,#ef3b36);
+        z-index: 300;
+        margin-left: 230px;
+        max-width: 100%;
+        height: 40px;
+        cursor: pointer;
+        overflow: hidden;
+    }
     
            
 }  
