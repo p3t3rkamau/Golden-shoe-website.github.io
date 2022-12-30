@@ -149,6 +149,101 @@
             position: relative;
             color: yellow;
         }
+        .categories-list ul li {
+            cursor: pointer;
+            transition: .5s;
+        }
+        .categories-list ul li:hover{
+            background: rgb(74, 102, 74);
+        }
+
+
+        figure .full-Img{
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            display: none;
+            
+            align-items: center;
+            justify-content: center;
+            
+            z-index: 300;
+        }
+        figure .full-Img img {
+            width: 90%;
+            max-width: 450px;
+            max-height: 80%;
+            margin-left: 5rem;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .full-image-description{
+            position: relative;
+            background-image: linear-gradient(to right,blue,red);
+            color: black !important;
+            padding: 3rem;
+            left: -2rem;
+            width: 100%;
+            max-width: 400px;
+            
+            top: 0rem;
+            text-align: center;
+            z-index: 400;
+        }
+
+        .full-image-description > span{
+            margin: 0 0 10px 0;
+            color: lawngreen;
+        
+        }
+        .full-image-description p {
+            margin: 10px 0 10px 0;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .full-image-description button{
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            background-color: red;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            height: 100%;
+            width: 100%;
+            transition: .8s;
+        }
+        .full-image-description button:hover{
+            background: green;
+        }
+        figure{
+            position: relative;
+        }
+        .close-zoomed-icon{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #fav-icon {
+        
+            color: yellow;
+            font-size: 12px;
+        }
+        .full-image-description #fav-icon{
+            font-size: 20px;
+        }
       
     </style>
        <link rel="stylesheet" href="/css/adidas page responsive.css">
@@ -162,33 +257,49 @@
       
         <tr>
             <td rowspan="6">
+                <figure>
+                    <div class="full-Img" id="fullImgBox">
+                        <img src="" id="fullImg">
+                        <div class="full-image-description">
+                            <span id="name">ADIDAS SHOCK BLADES</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ea.</p>
+                            <p>KSH 3800</p>
+                            <p class="change"><i class='bx bx-heart' id="fav-icon"></i></p>
+                            <button onclick="window.location.href='cart page.html'"; class="add-cart">Add to cart</button>
+                        </div> 
+                        <div class="close-zoomed-icon" onclick="closeFullImg()">X</div>
+        
+                    </div>
+                </figure>
             
                 <h2>CATEGORIES</h2>
                 
-                <ul>
-                    <hr>
-                    <hr>
-                    <li class="jordan">Jordan</li>
-                    <hr>
-                    <li>Nike</li>
-                    <hr>
-                    <li>Adidas</li>
-                    <hr>
-                    <li>Yeezy</li>
-                    <hr>
-                    <li>All brands</li>
-                    <hr>
-                    <li>Women</li>
-                    <hr>
-                    <li>kids</li>
-                    <hr>
-
-                </ul>
+                <div class="categories-list">
+                    <ul>
+                        <hr>
+                        <hr>
+                        <li class="jordan"  onclick="window.location.href='/Each type/jordan.html'" >Jordan</li>
+                        <hr>
+                        <li onclick="window.location.href='/Each type/Nike.html'">Nike</li>
+                        <hr>
+                        <li onclick="window.location.href='/Each type/Adidas.html'">Adidas</li>
+                        <hr>
+                        <li onclick="window.location.href='/Each type/#..html'">Yeezy</li>
+                        <hr>
+                        <li>All brands</li>
+                        <hr>
+                        <li>Women</li>
+                        <hr>
+                        <li>kids</li>
+                        <hr>
+    
+                    </ul>
+                  </div>
             </td>
             <td>
                 <div class="product-box" >
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_0b11084bbe2a4004bc9360306b890e04.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_0b11084bbe2a4004bc9360306b890e04.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -202,7 +313,7 @@
             <td>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_1cb3f90576734931927de80b4519e35f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_1cb3f90576734931927de80b4519e35f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -214,7 +325,7 @@
             <td>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_2c987864cf8448999d3a398bd9e6825f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_2c987864cf8448999d3a398bd9e6825f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -226,57 +337,7 @@
             <td>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_50134b5eaa8e4f06b3ff53183d5ba561.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_518b3e86970e4e8e8ff0aea8a0894e3a.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_5e35240236704a01b1164c93df934d5f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_5f20b9978dd3495ca8fc74b2ec760d2b.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
-                        <div class="description">
-                            <span>NIKE SHOES</span>
-                            <p>KSH 4000</p>
-                            <button class="add-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="product-box">
-                    <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_60c95e8a9ae34f0db183921126fd26e6.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_50134b5eaa8e4f06b3ff53183d5ba561.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -290,7 +351,57 @@
             <td>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_692f12fb96ca4f809482f77fca2c4b16.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_518b3e86970e4e8e8ff0aea8a0894e3a.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_5e35240236704a01b1164c93df934d5f.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_5f20b9978dd3495ca8fc74b2ec760d2b.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_60c95e8a9ae34f0db183921126fd26e6.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <div class="description">
+                            <span>NIKE SHOES</span>
+                            <p>KSH 4000</p>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-box">
+                    <div class="gallery_item_1">
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_692f12fb96ca4f809482f77fca2c4b16.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -304,7 +415,7 @@
                 
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_6ae1712d61dd4791b6ae11c0c630b86d.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_6ae1712d61dd4791b6ae11c0c630b86d.jpg" class="gallery-img" onclick="window.location.href='single product page.html'";>  
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -317,7 +428,7 @@
                 
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_6ae838c28c504cabaa7cdcf7417b144c.jpg" class="gallery-img1" onclick="window.location.href='single product page.html'";  >
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_6ae838c28c504cabaa7cdcf7417b144c.jpg" class="gallery-img1" onclick="window.location.href='single product page.html'";  >
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -330,7 +441,7 @@
             <td>
                 <div class="product-box">
                     <div class="gallery_item_1">
-                        <img src="/images/golden shoe back up/ADIDAS/254748772090_status_6f81394b4d4540fb99a6ca92827365e2.jpg" class="gallery-img2"  onclick="window.location.href='single product page.html'";>
+                        <img onclick="openFullImg(this.src)" src="/images/golden shoe back up/ADIDAS/254748772090_status_6f81394b4d4540fb99a6ca92827365e2.jpg" class="gallery-img2"  onclick="window.location.href='single product page.html'";>
                         <div class="description">
                             <span>NIKE SHOES</span>
                             <p>KSH 4000</p>
@@ -345,6 +456,7 @@
         
     </table>
     
+ 
     <script>
         let untouchedFavIcon = document.getElementById("fav-icon");
         let touchedFavIcon = document.getElementsByClassName("touched-fav-icon");
@@ -354,9 +466,28 @@
             document.getElementsById("change").innerHTML = touchedFavIcon
             
         });
-    
-        
-    </script>
+
+
+
+        //  zooom product animation effect
+        const fullImgBox = document.getElementById('fullImgBox');
+       const fullImg = document.getElementById('fullImg');
+       const imageDecription = document.querySelector('.description');
+       const divElement = document.querySelectorAll('.product-box');
+       // divElement.forEach ((btn) => {
+       //     btn.addEventListener('click', openFullImg())
+       // })
+   
+       function openFullImg(pic){
+           fullImgBox.style.display  = 'flex';
+           fullImg.src = pic;
+       }
+   // close zooom animatio effect
+       function closeFullImg(){
+           fullImgBox.style.display = 'none'
+
+       }
+   </script>
        <link rel="stylesheet" href="/css/adidas page responsive.css">
 </body>
 <link rel="stylesheet" href="/css/adidas page responsive.css">

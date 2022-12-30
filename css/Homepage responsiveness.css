@@ -487,15 +487,21 @@
         position: relative;
         justify-content: center;
         align-items: flex-start;
-        top: 15px;
-        right: -30px;
+        top: 10px;
+        right: -18px;
         
     }
     .mobile-hambuger i {
         font-size: 30px !important;
         cursor: pointer;
+        padding: 5px;
 
     } 
+    .mobile-hambuger i:nth-child(1)::after{
+        width: 2px;
+        height: 2px;
+        background-color: red;
+    }
 /* _________________mobile hambuger_________________________ */
 
     .container .shop-contents .product-box {
