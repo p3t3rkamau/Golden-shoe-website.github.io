@@ -457,3 +457,43 @@ figure{
 .full-image-description #fav-icon{
     font-size: 20px;
 }
+.mobile-small-nav-bar{
+    position: absolute;
+    background: black;
+    height: 1000vh;
+    z-index: 500;
+    position: fixed;
+    
+    width: 500vw;
+    /* display: flex; */
+    display: none;
+    flex-direction: row;
+    
+}
+.mobile-small-nav-bar ul li{
+   
+    
+    align-items: flex-start;
+    flex-direction: column;
+    float: none;
+    padding: 27px;
+    top: 3rem;
+}
+.mobile-small-nav-bar ul li img{
+    max-width: 100%;
+    width: 110px !important;
+   
+    padding: 5px;
+    left: -1.5rem !important;
+    position: relative;
+}
+.each-type,.yeezy-images,.ultra-boost-images,.nmd-images,.pharell-images,.nike-each-type,.yeezy-each-type,.jordan-each-type,.women-each-type,.kids-each-type,.gifts  {
+    display: none;
+}
+.close-each-type{
+    position: absolute;
+    top: .8%;
+    left: 18%;
+    font-size: 22px;
+    z-index: 1000;
+}
